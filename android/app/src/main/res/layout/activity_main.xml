@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:id="@+id/content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <TextView
+        android:layout_marginTop="60dp"
+        android:id="@+id/speech"
+        android:layout_centerHorizontal="true"
+        android:textColor="#1f3445"
+        android:textSize="24sp"
+        android:padding="16dp"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tap &amp; hold" />
+
+    <FrameLayout
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/level2"
+            android:layout_gravity="center"
+            android:background="@drawable/circle_light"
+            android:layout_width="300dp"
+            android:layout_height="300dp" />
+        <ImageView
+            android:id="@+id/level"
+            android:layout_gravity="center"
+            android:background="@drawable/circle"
+            android:layout_width="300dp"
+            android:layout_height="300dp" />
+        <ImageButton
+            android:background="@drawable/watson_red"
+            android:layout_gravity="center"
+            android:id="@+id/record"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </FrameLayout>
+</RelativeLayout>
