@@ -74,6 +74,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
                 if (event.getAction() == MotionEvent.ACTION_UP) {
+                    // This is needed because it will change by the time the request is made
+                    final String text = mSpeech.getText().toString();
                     mRecord.setBackground(getDrawable(R.drawable.watson_red));
                     RequestQueue queue = Volley.newRequestQueue(getApplicationContext());
                     StringRequest sr = new StringRequest(Request.Method.POST,"http://candy-machine.mybluemix.net/sentiment", new Response.Listener<String>() {
@@ -90,7 +92,7 @@ public class MainActivity extends AppCompatActivity {
                         @Override
                         protected Map<String,String> getParams(){
                             Map<String,String> params = new HashMap<>();
-                            params.put("transcript", mSpeech.getText().toString());
+                            params.put("transcript", text);
                             return params;
                         }
 

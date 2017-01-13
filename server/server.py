@@ -16,6 +16,7 @@ socketio = SocketIO(app)
 @app.route("/sentiment", methods=["POST"])
 def getSentiment():
     text = request.form["transcript"]
+    print(text)
     result = alchemy.sentiment(text=text)
     sentiment = result["docSentiment"]["type"]
 
