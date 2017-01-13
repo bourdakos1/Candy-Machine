@@ -83,10 +83,10 @@ textStream.on('data', function(user_speech_text) {
 const socket = io.connect('http://candy-machine.mybluemix.net');
 socket.on('connect', function () {
   console.log("socket connected");
-  //socket.join("test");
 });
 
+// TODO: fix miss-spelling
 socket.on('dispence', function(data) {
-    console.log('Dispence Candy!');
+    console.log('Dispense Candy!');
     console.log(data["sentiment"]);
 });
