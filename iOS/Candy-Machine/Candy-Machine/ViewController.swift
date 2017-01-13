@@ -14,6 +14,23 @@ class ViewController: UIViewController {
     @IBOutlet weak var speech: UILabel!
     @IBOutlet weak var record: UIButton!
     
+    var speechToText: SpeechToText
+    
+    required init?(coder aDecoder: NSCoder) {
+        var keys: NSDictionary?
+        
+        if let path = Bundle.main.path(forResource: "Keys", ofType: "plist") {
+            keys = NSDictionary(contentsOfFile: path)
+        }
+        
+        let username = keys?["username"] as? String
+        let password = keys?["password"] as? String
+        
+        // Initialize STT.
+        speechToText = SpeechToText(username: username!, password: password!)
+    
+        super.init(coder: aDecoder)
+    }
     
     func startStreaming() {
         var settings = RecognitionSettings(contentType: .opus)
@@ -31,7 +48,6 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-    
         record.addTarget(self, action: #selector(ViewController.buttonDown(sender:)), for: .touchDown)
         record.addTarget(self, action: #selector(ViewController.buttonUp(sender:)), for: [.touchUpInside, .touchUpOutside])
     }

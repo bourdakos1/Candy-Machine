@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		237DF5891E2982A500B365FB /* RestKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 237DF5881E2982A500B365FB /* RestKit.framework */; };
+		237DF58B1E29873100B365FB /* Keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 237DF58A1E29873100B365FB /* Keys.plist */; };
 		2381C7DB1E288ED100329FE0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2381C7DA1E288ED100329FE0 /* AppDelegate.swift */; };
 		2381C7DD1E288ED100329FE0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2381C7DC1E288ED100329FE0 /* ViewController.swift */; };
 		2381C7E01E288ED100329FE0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2381C7DE1E288ED100329FE0 /* Main.storyboard */; };
@@ -14,8 +16,7 @@
 		2381C7E51E288ED100329FE0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2381C7E31E288ED100329FE0 /* LaunchScreen.storyboard */; };
 		2381C7F01E288ED100329FE0 /* Candy_MachineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2381C7EF1E288ED100329FE0 /* Candy_MachineTests.swift */; };
 		2381C7FB1E288ED100329FE0 /* Candy_MachineUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2381C7FA1E288ED100329FE0 /* Candy_MachineUITests.swift */; };
-		23852F511E28C2C50010386E /* SpeechToTextV1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23852F501E28C2C50010386E /* SpeechToTextV1.framework */; };
-		23852F521E28C2C50010386E /* SpeechToTextV1.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 23852F501E28C2C50010386E /* SpeechToTextV1.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		23852F671E29720E0010386E /* SpeechToTextV1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23852F541E294CA60010386E /* SpeechToTextV1.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,21 +36,9 @@
 		};
 /* End PBXContainerItemProxy section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		2381C8131E28B8D900329FE0 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				23852F521E28C2C50010386E /* SpeechToTextV1.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
+		237DF5881E2982A500B365FB /* RestKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RestKit.framework; path = Carthage/Build/iOS/RestKit.framework; sourceTree = "<group>"; };
+		237DF58A1E29873100B365FB /* Keys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Keys.plist; sourceTree = "<group>"; };
 		2381C7D71E288ED100329FE0 /* Candy-Machine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Candy-Machine.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2381C7DA1E288ED100329FE0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2381C7DC1E288ED100329FE0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -63,8 +52,7 @@
 		2381C7F61E288ED100329FE0 /* Candy-MachineUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Candy-MachineUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2381C7FA1E288ED100329FE0 /* Candy_MachineUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Candy_MachineUITests.swift; sourceTree = "<group>"; };
 		2381C7FC1E288ED100329FE0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2381C8151E28BA5600329FE0 /* SpeechToTextV1.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpeechToTextV1.framework; path = Carthage/Build/iOS/SpeechToTextV1.framework; sourceTree = "<group>"; };
-		23852F501E28C2C50010386E /* SpeechToTextV1.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpeechToTextV1.framework; path = Carthage/Build/iOS/SpeechToTextV1.framework; sourceTree = "<group>"; };
+		23852F541E294CA60010386E /* SpeechToTextV1.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpeechToTextV1.framework; path = Carthage/Build/iOS/SpeechToTextV1.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,7 +60,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				23852F511E28C2C50010386E /* SpeechToTextV1.framework in Frameworks */,
+				23852F671E29720E0010386E /* SpeechToTextV1.framework in Frameworks */,
+				237DF5891E2982A500B365FB /* RestKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,12 +85,11 @@
 		2381C7CE1E288ED100329FE0 = {
 			isa = PBXGroup;
 			children = (
-				23852F501E28C2C50010386E /* SpeechToTextV1.framework */,
 				2381C7D91E288ED100329FE0 /* Candy-Machine */,
 				2381C7EE1E288ED100329FE0 /* Candy-MachineTests */,
 				2381C7F91E288ED100329FE0 /* Candy-MachineUITests */,
 				2381C7D81E288ED100329FE0 /* Products */,
-				2381C8141E28BA5500329FE0 /* Frameworks */,
+				23852F531E294CA60010386E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -124,6 +112,7 @@
 				2381C7E11E288ED100329FE0 /* Assets.xcassets */,
 				2381C7E31E288ED100329FE0 /* LaunchScreen.storyboard */,
 				2381C7E61E288ED100329FE0 /* Info.plist */,
+				237DF58A1E29873100B365FB /* Keys.plist */,
 			);
 			path = "Candy-Machine";
 			sourceTree = "<group>";
@@ -146,10 +135,11 @@
 			path = "Candy-MachineUITests";
 			sourceTree = "<group>";
 		};
-		2381C8141E28BA5500329FE0 /* Frameworks */ = {
+		23852F531E294CA60010386E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				2381C8151E28BA5600329FE0 /* SpeechToTextV1.framework */,
+				237DF5881E2982A500B365FB /* RestKit.framework */,
+				23852F541E294CA60010386E /* SpeechToTextV1.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -164,7 +154,7 @@
 				2381C7D31E288ED100329FE0 /* Sources */,
 				2381C7D41E288ED100329FE0 /* Frameworks */,
 				2381C7D51E288ED100329FE0 /* Resources */,
-				2381C8131E28B8D900329FE0 /* Embed Frameworks */,
+				23852F561E294CAE0010386E /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -179,9 +169,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2381C8021E288ED100329FE0 /* Build configuration list for PBXNativeTarget "Candy-MachineTests" */;
 			buildPhases = (
+				19C3222304FC518213261B82 /* [CP] Check Pods Manifest.lock */,
 				2381C7E71E288ED100329FE0 /* Sources */,
 				2381C7E81E288ED100329FE0 /* Frameworks */,
 				2381C7E91E288ED100329FE0 /* Resources */,
+				0BF40B9C8129D07A03529BAD /* [CP] Embed Pods Frameworks */,
+				9F6A150AE0999675A0350EAE /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -197,9 +190,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2381C8051E288ED100329FE0 /* Build configuration list for PBXNativeTarget "Candy-MachineUITests" */;
 			buildPhases = (
+				D718A4E29732F76FE49AA5E2 /* [CP] Check Pods Manifest.lock */,
 				2381C7F21E288ED100329FE0 /* Sources */,
 				2381C7F31E288ED100329FE0 /* Frameworks */,
 				2381C7F41E288ED100329FE0 /* Resources */,
+				C3E55DA541152365F2DB1D8B /* [CP] Embed Pods Frameworks */,
+				25CBD9459DD83C5C13C9613A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -265,6 +261,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				237DF58B1E29873100B365FB /* Keys.plist in Resources */,
 				2381C7E51E288ED100329FE0 /* LaunchScreen.storyboard in Resources */,
 				2381C7E21E288ED100329FE0 /* Assets.xcassets in Resources */,
 				2381C7E01E288ED100329FE0 /* Main.storyboard in Resources */,
@@ -286,6 +283,114 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0BF40B9C8129D07A03529BAD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Candy-MachineTests/Pods-Candy-MachineTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		19C3222304FC518213261B82 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		23852F561E294CAE0010386E /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/SpeechToTextV1.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RestKit.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+		25CBD9459DD83C5C13C9613A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Candy-MachineUITests/Pods-Candy-MachineUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9F6A150AE0999675A0350EAE /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Candy-MachineTests/Pods-Candy-MachineTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C3E55DA541152365F2DB1D8B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Candy-MachineUITests/Pods-Candy-MachineUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D718A4E29732F76FE49AA5E2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2381C7D31E288ED100329FE0 /* Sources */ = {
