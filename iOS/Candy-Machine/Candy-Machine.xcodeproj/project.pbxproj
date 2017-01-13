@@ -14,6 +14,8 @@
 		2381C7E51E288ED100329FE0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2381C7E31E288ED100329FE0 /* LaunchScreen.storyboard */; };
 		2381C7F01E288ED100329FE0 /* Candy_MachineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2381C7EF1E288ED100329FE0 /* Candy_MachineTests.swift */; };
 		2381C7FB1E288ED100329FE0 /* Candy_MachineUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2381C7FA1E288ED100329FE0 /* Candy_MachineUITests.swift */; };
+		23852F511E28C2C50010386E /* SpeechToTextV1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23852F501E28C2C50010386E /* SpeechToTextV1.framework */; };
+		23852F521E28C2C50010386E /* SpeechToTextV1.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 23852F501E28C2C50010386E /* SpeechToTextV1.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +35,20 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		2381C8131E28B8D900329FE0 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				23852F521E28C2C50010386E /* SpeechToTextV1.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		2381C7D71E288ED100329FE0 /* Candy-Machine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Candy-Machine.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2381C7DA1E288ED100329FE0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -47,6 +63,8 @@
 		2381C7F61E288ED100329FE0 /* Candy-MachineUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Candy-MachineUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2381C7FA1E288ED100329FE0 /* Candy_MachineUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Candy_MachineUITests.swift; sourceTree = "<group>"; };
 		2381C7FC1E288ED100329FE0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2381C8151E28BA5600329FE0 /* SpeechToTextV1.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpeechToTextV1.framework; path = Carthage/Build/iOS/SpeechToTextV1.framework; sourceTree = "<group>"; };
+		23852F501E28C2C50010386E /* SpeechToTextV1.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpeechToTextV1.framework; path = Carthage/Build/iOS/SpeechToTextV1.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23852F511E28C2C50010386E /* SpeechToTextV1.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,10 +96,12 @@
 		2381C7CE1E288ED100329FE0 = {
 			isa = PBXGroup;
 			children = (
+				23852F501E28C2C50010386E /* SpeechToTextV1.framework */,
 				2381C7D91E288ED100329FE0 /* Candy-Machine */,
 				2381C7EE1E288ED100329FE0 /* Candy-MachineTests */,
 				2381C7F91E288ED100329FE0 /* Candy-MachineUITests */,
 				2381C7D81E288ED100329FE0 /* Products */,
+				2381C8141E28BA5500329FE0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -125,6 +146,14 @@
 			path = "Candy-MachineUITests";
 			sourceTree = "<group>";
 		};
+		2381C8141E28BA5500329FE0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2381C8151E28BA5600329FE0 /* SpeechToTextV1.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,6 +164,7 @@
 				2381C7D31E288ED100329FE0 /* Sources */,
 				2381C7D41E288ED100329FE0 /* Frameworks */,
 				2381C7D51E288ED100329FE0 /* Resources */,
+				2381C8131E28B8D900329FE0 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -414,6 +444,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = KGK2UJBFUH;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "Candy-Machine/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bourdakos1.Candy-Machine";
@@ -427,6 +461,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = KGK2UJBFUH;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "Candy-Machine/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bourdakos1.Candy-Machine";
@@ -512,6 +550,7 @@
 				2381C8011E288ED100329FE0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2381C8021E288ED100329FE0 /* Build configuration list for PBXNativeTarget "Candy-MachineTests" */ = {
 			isa = XCConfigurationList;
@@ -520,6 +559,7 @@
 				2381C8041E288ED100329FE0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2381C8051E288ED100329FE0 /* Build configuration list for PBXNativeTarget "Candy-MachineUITests" */ = {
 			isa = XCConfigurationList;
@@ -528,6 +568,7 @@
 				2381C8071E288ED100329FE0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
