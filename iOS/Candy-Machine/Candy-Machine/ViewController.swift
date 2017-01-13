@@ -15,6 +15,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var record: UIButton!
     
     var speechToText: SpeechToText
+    var speechText = ""
     
     required init?(coder aDecoder: NSCoder) {
         var keys: NSDictionary?
@@ -38,12 +39,22 @@ class ViewController: UIViewController {
         settings.interimResults = true
         let failure = { (error: Error) in print(error) }
         speechToText.recognizeMicrophone(settings: settings, failure: failure) { results in
-            print(results.bestTranscript)
+            self.speechText = results.bestTranscript
+            print(self.speechText)
         }
     }
     
     func stopStreaming() {
         speechToText.stopRecognizeMicrophone()
+        var request = URLRequest(url: URL(string: "https://candy-machine.mybluemix.net/sentiment")!)
+        request.httpMethod = "POST"
+        request.setValue("application/x-www-form-urlencoded; charset=utf-8", forHTTPHeaderField: "Content-Type")
+        let postString = "transcript=" + speechText
+        request.httpBody = postString.data(using: .utf8)
+        let task = URLSession.shared.dataTask(with: request) { data, response, error in
+            
+        }
+        task.resume()
     }
 
     override func viewDidLoad() {
