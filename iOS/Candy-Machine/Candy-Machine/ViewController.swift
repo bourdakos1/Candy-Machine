@@ -8,11 +8,13 @@
 
 import UIKit
 import SpeechToTextV1
+import SpriteKit
 
 class ViewController: UIViewController {
     
     @IBOutlet weak var speech: UILabel!
     @IBOutlet weak var record: UIButton!
+//    @IBOutlet weak var star: StarView!
     
     var speechToText: SpeechToText
     var speechText = ""
@@ -28,8 +30,7 @@ class ViewController: UIViewController {
         let password = keys?["password"] as? String
         
         // Initialize STT.
-        speechToText = SpeechToText(username: username!, password: password!)
-    
+        speechToText = SpeechToText(username: username!, password: password!)    
         super.init(coder: aDecoder)
     }
     
@@ -61,6 +62,14 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         record.addTarget(self, action: #selector(ViewController.buttonDown(sender:)), for: .touchDown)
         record.addTarget(self, action: #selector(ViewController.buttonUp(sender:)), for: [.touchUpInside, .touchUpOutside])
+        
+        let scene = SpriteView(size: view.bounds.size)
+        let skView = view as! SKView
+//        skView.showsFPS = true
+//        skView.showsNodeCount = true
+//        skView.ignoresSiblingOrder = true
+        scene.scaleMode = .resizeFill
+        skView.presentScene(scene)
     }
     
     func buttonDown(sender: AnyObject) {
@@ -70,12 +79,5 @@ class ViewController: UIViewController {
     func buttonUp(sender: AnyObject) {
         stopStreaming()
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-
 }
 
