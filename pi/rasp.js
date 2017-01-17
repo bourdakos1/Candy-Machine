@@ -98,7 +98,7 @@ socket.on('dispence', function(data) {
 *******************************************************************************/
 function dispense(sentiment) {
   var options = {
-    pythonPath: 'python3',
+    // pythonPath: 'python3',
     args: [sentiment]
   };
   var pyshell = PythonShell.run('dispense.py', options, function (err, results) {
