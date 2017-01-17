@@ -21,95 +21,34 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZOh-lR-kf8" customClass="StarView" customModule="Candy_Machine" customModuleProvider="target">
-                                <rect key="frame" x="62" y="208" width="250" height="250"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="250" id="rvc-R9-AcA"/>
-                                    <constraint firstAttribute="width" constant="250" id="vl9-xE-u41"/>
-                                </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="color">
-                                        <color key="value" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="duration">
-                                        <real key="value" value="7"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HWD-BR-VSq" customClass="StarView" customModule="Candy_Machine" customModuleProvider="target">
-                                <rect key="frame" x="62.5" y="208.5" width="250" height="250"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="250" id="aUG-cl-yTT"/>
-                                    <constraint firstAttribute="height" constant="250" id="wmV-cY-pK3"/>
-                                </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="color">
-                                        <color key="value" red="0.0" green="1" blue="0.25" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="duration">
-                                        <real key="value" value="5"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gH9-VE-Yxh" customClass="StarView" customModule="Candy_Machine" customModuleProvider="target">
-                                <rect key="frame" x="62.5" y="208.5" width="250" height="250"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="250" id="ahF-G9-eEx"/>
-                                    <constraint firstAttribute="height" constant="250" id="jr2-vj-JS6"/>
-                                </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="color">
-                                        <color key="value" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="duration">
-                                        <real key="value" value="3"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ad4-Aq-7cU">
-                                <rect key="frame" x="164" y="318" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ad4-Aq-7cU">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JfW-2y-u5y">
-                                <rect key="frame" x="164" y="175" width="42" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap &amp; Hold" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JfW-2y-u5y">
+                                <rect key="frame" x="128" y="120" width="119" height="28"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KPR-vd-vbQ" customClass="StarBoy" customModule="Candy_Machine" customModuleProvider="target">
-                                <rect key="frame" x="63" y="208" width="250" height="250"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="watson_logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="TXA-TP-KbJ">
+                                <rect key="frame" x="113" y="258" width="150" height="150"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="250" id="MMc-4M-Kuc"/>
-                                    <constraint firstAttribute="height" constant="250" id="z7U-Yb-FBm"/>
+                                    <constraint firstAttribute="height" constant="150" id="NSe-Jh-OP8"/>
+                                    <constraint firstAttribute="width" constant="150" id="gtt-na-ll5"/>
                                 </constraints>
-                            </view>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="HWD-BR-VSq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DSe-R1-HRu"/>
-                            <constraint firstItem="KPR-vd-vbQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Nml-Jv-2LE"/>
-                            <constraint firstItem="gH9-VE-Yxh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="O4K-Rl-nG5"/>
-                            <constraint firstItem="Ad4-Aq-7cU" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="QSL-nT-kNB"/>
-                            <constraint firstItem="HWD-BR-VSq" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="RN9-n4-qQQ"/>
-                            <constraint firstItem="ZOh-lR-kf8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TUa-0F-h0z"/>
-                            <constraint firstItem="Ad4-Aq-7cU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="goG-M0-PGO"/>
+                            <constraint firstAttribute="bottom" secondItem="Ad4-Aq-7cU" secondAttribute="bottom" id="74B-eR-Bjf"/>
+                            <constraint firstItem="TXA-TP-KbJ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="PP6-1J-Ti8"/>
+                            <constraint firstItem="TXA-TP-KbJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RqW-wx-SGE"/>
+                            <constraint firstItem="Ad4-Aq-7cU" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="VTI-DZ-XgF"/>
+                            <constraint firstItem="JfW-2y-u5y" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="100" id="eaB-qX-wFX"/>
+                            <constraint firstItem="Ad4-Aq-7cU" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="hfE-wt-d6S"/>
+                            <constraint firstAttribute="trailing" secondItem="Ad4-Aq-7cU" secondAttribute="trailing" id="je6-zz-cLs"/>
                             <constraint firstItem="JfW-2y-u5y" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rcR-Gi-SeC"/>
-                            <constraint firstItem="ZOh-lR-kf8" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="tDZ-VX-Zvn"/>
-                            <constraint firstItem="gH9-VE-Yxh" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="tGK-VU-11F"/>
-                            <constraint firstItem="KPR-vd-vbQ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="y3M-wm-Jly"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="ZOh-lR-kf8"/>
-                                <exclude reference="HWD-BR-VSq"/>
-                                <exclude reference="gH9-VE-Yxh"/>
-                                <exclude reference="KPR-vd-vbQ"/>
-                            </mask>
-                        </variation>
                     </view>
                     <connections>
                         <outlet property="record" destination="Ad4-Aq-7cU" id="IqM-Y7-eO0"/>
@@ -120,4 +59,7 @@
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <image name="watson_logo.png" width="1090" height="1090"/>
+    </resources>
 </document>

@@ -14,7 +14,6 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var speech: UILabel!
     @IBOutlet weak var record: UIButton!
-//    @IBOutlet weak var star: StarView!
     
     var speechToText: SpeechToText
     var speechText = ""
@@ -41,43 +40,66 @@ class ViewController: UIViewController {
         let failure = { (error: Error) in print(error) }
         speechToText.recognizeMicrophone(settings: settings, failure: failure) { results in
             self.speechText = results.bestTranscript
-            print(self.speechText)
+            if self.speechText != "" {
+                self.speech.text = self.speechText
+            } else {
+                self.speech.text = "Listening..."
+            }
+            print("rec")
         }
     }
     
     func stopStreaming() {
         speechToText.stopRecognizeMicrophone()
-        var request = URLRequest(url: URL(string: "https://candy-machine.mybluemix.net/sentiment")!)
-        request.httpMethod = "POST"
-        request.setValue("application/x-www-form-urlencoded; charset=utf-8", forHTTPHeaderField: "Content-Type")
-        let postString = "transcript=" + speechText
-        request.httpBody = postString.data(using: .utf8)
-        let task = URLSession.shared.dataTask(with: request) { data, response, error in
-            
-        }
-        task.resume()
+        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2), execute: {
+            print("requesting: \(self.speechText)")
+            var request = URLRequest(url: URL(string: "https://candy-machine.mybluemix.net/sentiment")!)
+            request.httpMethod = "POST"
+            request.setValue("application/x-www-form-urlencoded; charset=utf-8", forHTTPHeaderField: "Content-Type")
+            let postString = "transcript=" + self.speechText
+            request.httpBody = postString.data(using: .utf8)
+            let task = URLSession.shared.dataTask(with: request) { data, response, error in
+                if error != nil {
+                    DispatchQueue.main.async() {
+                        self.speech.text = "Try again"
+                    }
+                } else {
+                    do {
+                        let parsedData = try JSONSerialization.jsonObject(with: data!, options: []) as! [String:Any]
+                        DispatchQueue.main.async() {
+                            self.speech.text = String(describing: parsedData["sentiment"] ?? "Try again")
+                        }
+                    } catch _ as NSError {
+                        DispatchQueue.main.async() {
+                            self.speech.text = "Try again"
+                        }
+                    }
+                }
+            }
+            task.resume()
+        })
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        record.addTarget(self, action: #selector(ViewController.buttonDown(sender:)), for: .touchDown)
-        record.addTarget(self, action: #selector(ViewController.buttonUp(sender:)), for: [.touchUpInside, .touchUpOutside])
-        
+
         let scene = SpriteView(size: view.bounds.size)
         let skView = view as! SKView
-//        skView.showsFPS = true
-//        skView.showsNodeCount = true
-//        skView.ignoresSiblingOrder = true
         scene.scaleMode = .resizeFill
         skView.presentScene(scene)
+        
+        record.addTarget(self, action: #selector(ViewController.buttonDown(sender:)), for: .touchDown)
+        record.addTarget(self, action: #selector(ViewController.buttonUp(sender:)), for: [.touchUpInside, .touchUpOutside])
     }
     
     func buttonDown(sender: AnyObject) {
         startStreaming()
+        speech.text = "Listening..."
     }
     
     func buttonUp(sender: AnyObject) {
         stopStreaming()
     }
+
 }
 

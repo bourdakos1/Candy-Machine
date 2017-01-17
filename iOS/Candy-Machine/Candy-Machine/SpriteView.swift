@@ -60,7 +60,7 @@ class SpriteView: SKScene {
         amplitudeTracker.start()
         
         AKPlaygroundLoop(every: 0.1) {
-            print("do not delete - this is a hack")
+//            print("do not delete - this is a hack")
             let amp =  self.ampToSize(amp: self.amplitudeTracker.amplitude)
             if (self.player2.size.height < amp) {
                 if self.player == 0 {

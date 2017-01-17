@@ -9,13 +9,12 @@
 /* Begin PBXBuildFile section */
 		237DF5891E2982A500B365FB /* RestKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 237DF5881E2982A500B365FB /* RestKit.framework */; };
 		237DF58B1E29873100B365FB /* Keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 237DF58A1E29873100B365FB /* Keys.plist */; };
-		237DF58D1E2C3E8300B365FB /* StarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237DF58C1E2C3E8300B365FB /* StarView.swift */; };
-		237DF58F1E2CAF8C00B365FB /* StarBoy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237DF58E1E2CAF8C00B365FB /* StarBoy.swift */; };
 		237DF5931E2CB0F200B365FB /* red.png in Resources */ = {isa = PBXBuildFile; fileRef = 237DF5901E2CB0F200B365FB /* red.png */; };
 		237DF5941E2CB0F200B365FB /* green.png in Resources */ = {isa = PBXBuildFile; fileRef = 237DF5911E2CB0F200B365FB /* green.png */; };
 		237DF5951E2CB0F200B365FB /* blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 237DF5921E2CB0F200B365FB /* blue.png */; };
 		237DF5971E2D646E00B365FB /* SpriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237DF5961E2D646E00B365FB /* SpriteView.swift */; };
 		237DF5991E2D726F00B365FB /* AudioKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 237DF5981E2D726F00B365FB /* AudioKit.framework */; };
+		237DF59B1E2D82D700B365FB /* watson_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 237DF59A1E2D82D700B365FB /* watson_logo.png */; };
 		2381C7DB1E288ED100329FE0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2381C7DA1E288ED100329FE0 /* AppDelegate.swift */; };
 		2381C7DD1E288ED100329FE0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2381C7DC1E288ED100329FE0 /* ViewController.swift */; };
 		2381C7E01E288ED100329FE0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2381C7DE1E288ED100329FE0 /* Main.storyboard */; };
@@ -46,13 +45,12 @@
 /* Begin PBXFileReference section */
 		237DF5881E2982A500B365FB /* RestKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RestKit.framework; path = Carthage/Build/iOS/RestKit.framework; sourceTree = "<group>"; };
 		237DF58A1E29873100B365FB /* Keys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Keys.plist; sourceTree = "<group>"; };
-		237DF58C1E2C3E8300B365FB /* StarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StarView.swift; sourceTree = "<group>"; };
-		237DF58E1E2CAF8C00B365FB /* StarBoy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StarBoy.swift; sourceTree = "<group>"; };
 		237DF5901E2CB0F200B365FB /* red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = red.png; sourceTree = "<group>"; };
 		237DF5911E2CB0F200B365FB /* green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = green.png; sourceTree = "<group>"; };
 		237DF5921E2CB0F200B365FB /* blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blue.png; sourceTree = "<group>"; };
 		237DF5961E2D646E00B365FB /* SpriteView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpriteView.swift; sourceTree = "<group>"; };
 		237DF5981E2D726F00B365FB /* AudioKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioKit.framework; path = Carthage/Build/iOS/AudioKit.framework; sourceTree = "<group>"; };
+		237DF59A1E2D82D700B365FB /* watson_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = watson_logo.png; sourceTree = "<group>"; };
 		2381C7D71E288ED100329FE0 /* Candy-Machine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Candy-Machine.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2381C7DA1E288ED100329FE0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2381C7DC1E288ED100329FE0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -123,9 +121,8 @@
 			children = (
 				2381C7DA1E288ED100329FE0 /* AppDelegate.swift */,
 				2381C7DC1E288ED100329FE0 /* ViewController.swift */,
-				237DF58C1E2C3E8300B365FB /* StarView.swift */,
-				237DF58E1E2CAF8C00B365FB /* StarBoy.swift */,
 				237DF5961E2D646E00B365FB /* SpriteView.swift */,
+				237DF59A1E2D82D700B365FB /* watson_logo.png */,
 				237DF5901E2CB0F200B365FB /* red.png */,
 				237DF5911E2CB0F200B365FB /* green.png */,
 				237DF5921E2CB0F200B365FB /* blue.png */,
@@ -289,6 +286,7 @@
 				237DF5941E2CB0F200B365FB /* green.png in Resources */,
 				237DF5931E2CB0F200B365FB /* red.png in Resources */,
 				237DF5951E2CB0F200B365FB /* blue.png in Resources */,
+				237DF59B1E2D82D700B365FB /* watson_logo.png in Resources */,
 				2381C7E01E288ED100329FE0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -423,9 +421,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				237DF58F1E2CAF8C00B365FB /* StarBoy.swift in Sources */,
 				237DF5971E2D646E00B365FB /* SpriteView.swift in Sources */,
-				237DF58D1E2C3E8300B365FB /* StarView.swift in Sources */,
 				2381C7DD1E288ED100329FE0 /* ViewController.swift in Sources */,
 				2381C7DB1E288ED100329FE0 /* AppDelegate.swift in Sources */,
 			);
