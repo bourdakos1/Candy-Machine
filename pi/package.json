@@ -13,6 +13,7 @@
     "onoff": "^1.1.1",
     "watson-developer-cloud": "^2.2.0",
     "socket.io-client": "^1.7.2",
-    "python-shell": "^0.4.0"
+    "johnny-five": "^0.10.6",
+    "raspi-io": "^7.2.2"
   }
 }

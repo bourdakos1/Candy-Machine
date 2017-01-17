@@ -1,7 +1,9 @@
 const watson = require('watson-developer-cloud');
 const mic = require('mic');
 var io = require('socket.io-client');
-var PythonShell = require('python-shell');
+// var PythonShell = require('python-shell');
+var five = require("johnny-five");
+var Raspi = require("raspi-io");
 // const GPIO = require('onoff').Gpio;
 const config = require('./config.js');
 const BOUNCE_DURATION = 300;
@@ -96,17 +98,73 @@ socket.on('dispence', function(data) {
 /******************************************************************************
 * Run python to control motors
 *******************************************************************************/
-function dispense(sentiment) {
-  var options = {
-    // pythonPath: 'python3',
-    args: [sentiment]
-  };
-  var pyshell = PythonShell.run('dispense.py', options, function (err, results) {
-    if (err) throw err;
+// function dispense(sentiment) {
+//   var options = {
+//     // pythonPath: 'python3',
+//     args: [sentiment]
+//   };
+//   var pyshell = PythonShell.run('dispense.py', options, function (err, results) {
+//     if (err) throw err;
+//   });
+//
+//   pyshell.on('message', function (message) {
+//     // received a message sent from the Python script
+//     console.log(message);
+//   });
+// }
+
+/******************************************************************************
+* Control motor
+*******************************************************************************/
+var board = new five.Board({
+  io: new Raspi()
+});
+
+board.on("ready", function() {
+  var m1 = new five.Motor({
+    controller: "PCA9685",
+    frequency: 200, // Hz
+    pins: {
+      pwm: 8,
+      dir: 9,
+      cdir: 10,
+    },
   });
 
-  pyshell.on('message', function (message) {
-    // received a message sent from the Python script
-    console.log(message);
+  var m2 = new five.Motor({
+    controller: "PCA9685",
+    frequency: 200, // Hz
+    pins: {
+      pwm: 13,
+      dir: 12,
+      cdir: 11,
+    },
+  });
+
+  var m3 = new five.Motor({
+    controller: "PCA9685",
+    frequency: 200, // Hz
+    pins: {
+      pwm: 2,
+      dir: 3,
+      cdir: 4,
+    },
+  });
+
+  var m4 = new five.Motor({
+    controller: "PCA9685",
+    frequency: 200, // Hz
+    pins: {
+      pwm: 7,
+      dir: 6,
+      cdir: 5,
+    },
+  });
+});
+
+function dispense(sentiment) {
+  m3.forward(255);
+  board.wait(500, function() {
+    m3.release();
   });
 }
