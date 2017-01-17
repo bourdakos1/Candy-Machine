@@ -1,6 +1,7 @@
 const watson = require('watson-developer-cloud');
 const mic = require('mic');
 var io = require('socket.io-client');
+var PythonShell = require('python-shell');
 // const GPIO = require('onoff').Gpio;
 const config = require('./config.js');
 const BOUNCE_DURATION = 300;
@@ -89,4 +90,23 @@ socket.on('connect', function () {
 socket.on('dispence', function(data) {
     console.log('Dispense Candy!');
     console.log(data["sentiment"]);
+    dispense(data["sentiment"]);
 });
+
+/******************************************************************************
+* Run python to control motors
+*******************************************************************************/
+function dispense(sentiment) {
+  var options = {
+    pythonPath: 'python3',
+    args: [sentiment]
+  };
+  var pyshell = PythonShell.run('dispense.py', options, function (err, results) {
+    if (err) throw err;
+  });
+
+  pyshell.on('message', function (message) {
+    // received a message sent from the Python script
+    console.log(message);
+  });
+}
