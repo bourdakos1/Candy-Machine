@@ -121,7 +121,6 @@ var board = new five.Board({
 });
 
 function dispense(sentiment) {
-  //board.on("ready", function() {
     var m1 = new five.Motor({
       controller: "PCA9685",
       frequency: 200, // Hz
@@ -167,8 +166,10 @@ function dispense(sentiment) {
     });
 
     m3.forward(255);
-    board.wait(500, function() {
+    setTimeout(function() {
       m3.release();
-    });
-  //});
+    }, 500);
+    // board.wait(500, function() {
+    //   m3.release();
+    // });
 }
