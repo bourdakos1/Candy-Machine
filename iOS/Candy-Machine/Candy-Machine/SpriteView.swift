@@ -62,17 +62,22 @@ class SpriteView: SKScene {
         AKPlaygroundLoop(every: 0.1) {
 //            print("do not delete - this is a hack")
             let amp =  self.ampToSize(amp: self.amplitudeTracker.amplitude)
-            if (self.player2.size.height < amp) {
-                if self.player == 0 {
-                    self.boost(player: self.player0, height: amp)
-                } else if self.player == 1 {
-                    self.boost(player: self.player1, height: amp)
-                } else {
-                    self.boost(player: self.player2, height: amp)
-                    self.player = -1
-                }
-                self.player += 1
+            
+            if self.player == 0 {
+                self.boost(player: self.player0, height: amp)
+                self.boost(player: self.player1, height: amp * 0.8)
+                self.boost(player: self.player2, height: amp * 0.8)
+            } else if self.player == 1 {
+                self.boost(player: self.player1, height: amp)
+                self.boost(player: self.player0, height: amp * 0.8)
+                self.boost(player: self.player2, height: amp * 0.8)
+            } else {
+                self.boost(player: self.player2, height: amp)
+                self.boost(player: self.player0, height: amp * 0.8)
+                self.boost(player: self.player1, height: amp * 0.8)
+                self.player = -1
             }
+            self.player += 1
         }
     }
     
@@ -81,10 +86,12 @@ class SpriteView: SKScene {
     }
     
     func boost(player: SKSpriteNode, height: CGFloat) {
-        let size = SKAction.resize(toHeight: height, duration: 0.1)
-        player.run(size, completion: {
-            let size = SKAction.resize(toHeight: 200, duration: 0.6)
-            player.run(size)
-        })
+        if (player.size.height < height) {
+            let size = SKAction.resize(toHeight: height, duration: 0.1)
+            player.run(size, completion: {
+                let size = SKAction.resize(toHeight: 200, duration: 0.6)
+                player.run(size)
+            })
+        }
     }
 }
