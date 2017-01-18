@@ -169,6 +169,6 @@ function dispense(sentiment) {
     console.log('drive motor');
     board.wait(500, function() {
       console.log('stop motor');
-      m3.release();
+      m3.stop();
     });
 }
