@@ -166,10 +166,9 @@ function dispense(sentiment) {
     });
 
     m3.forward(255);
-    setTimeout(function() {
+    console.log('drive motor');
+    board.wait(500, function() {
+      console.log('stop motor');
       m3.release();
-    }, 500);
-    // board.wait(500, function() {
-    //   m3.release();
-    // });
+    });
 }
