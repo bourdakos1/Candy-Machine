@@ -146,10 +146,19 @@ function dispense(sentiment) {
       address: 0x60
     });
 
-    m3.forward(255);
-    console.log('drive motor');
-    board.wait(500, function() {
-      console.log('stop motor');
-      m3.stop();
-    });
+    if (sentiment == "negative") {
+      m3.forward(255);
+      console.log('drive motor');
+      board.wait(500, function() {
+        console.log('stop motor');
+        m3.stop();
+      });
+    } else {
+      m1.forward(255);
+      console.log('drive motor');
+      board.wait(500, function() {
+        console.log('stop motor');
+        m1.stop();
+      });
+    }
 }
