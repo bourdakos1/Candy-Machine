@@ -129,6 +129,7 @@ board.on("ready", function() {
       dir: 9,
       cdir: 10,
     },
+    address: 0x60
   });
 
   var m2 = new five.Motor({
@@ -139,6 +140,7 @@ board.on("ready", function() {
       dir: 12,
       cdir: 11,
     },
+    address: 0x60
   });
 
   var m3 = new five.Motor({
@@ -149,6 +151,7 @@ board.on("ready", function() {
       dir: 3,
       cdir: 4,
     },
+    address: 0x60
   });
 
   var m4 = new five.Motor({
@@ -159,6 +162,7 @@ board.on("ready", function() {
       dir: 6,
       cdir: 5,
     },
+    address: 0x60
   });
 });
 
