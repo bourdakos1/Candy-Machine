@@ -120,55 +120,55 @@ var board = new five.Board({
   io: new Raspi()
 });
 
-board.on("ready", function() {
-  var m1 = new five.Motor({
-    controller: "PCA9685",
-    frequency: 200, // Hz
-    pins: {
-      pwm: 8,
-      dir: 9,
-      cdir: 10,
-    },
-    address: 0x60
-  });
-
-  var m2 = new five.Motor({
-    controller: "PCA9685",
-    frequency: 200, // Hz
-    pins: {
-      pwm: 13,
-      dir: 12,
-      cdir: 11,
-    },
-    address: 0x60
-  });
-
-  var m3 = new five.Motor({
-    controller: "PCA9685",
-    frequency: 200, // Hz
-    pins: {
-      pwm: 2,
-      dir: 3,
-      cdir: 4,
-    },
-    address: 0x60
-  });
-
-  var m4 = new five.Motor({
-    controller: "PCA9685",
-    frequency: 200, // Hz
-    pins: {
-      pwm: 7,
-      dir: 6,
-      cdir: 5,
-    },
-    address: 0x60
-  });
-});
-
 function dispense(sentiment) {
-  m3.forward(255);
-  board.wait(500, function() {
-    m3.release();
+  board.on("ready", function() {
+    var m1 = new five.Motor({
+      controller: "PCA9685",
+      frequency: 200, // Hz
+      pins: {
+        pwm: 8,
+        dir: 9,
+        cdir: 10,
+      },
+      address: 0x60
+    });
+
+    var m2 = new five.Motor({
+      controller: "PCA9685",
+      frequency: 200, // Hz
+      pins: {
+        pwm: 13,
+        dir: 12,
+        cdir: 11,
+      },
+      address: 0x60
+    });
+
+    var m3 = new five.Motor({
+      controller: "PCA9685",
+      frequency: 200, // Hz
+      pins: {
+        pwm: 2,
+        dir: 3,
+        cdir: 4,
+      },
+      address: 0x60
+    });
+
+    var m4 = new five.Motor({
+      controller: "PCA9685",
+      frequency: 200, // Hz
+      pins: {
+        pwm: 7,
+        dir: 6,
+        cdir: 5,
+      },
+      address: 0x60
+    });
+
+    m3.forward(255);
+    board.wait(500, function() {
+      m3.release();
+    });
   });
 }
