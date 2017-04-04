@@ -1,0 +1,21 @@
+{
+  "name": "Candy-Machine",
+  "main": "server.js",
+  "description": "A candy machine with Watson",
+  "version": "1.0.0",
+  "private": false,
+  "engines": {
+    "node": "4.*"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "dotenv": "^4.0.0",
+    "express": "^4.14.1",
+    "socket.io": "^1.7.3",
+    "watson-developer-cloud": "^2.28.0"
+  },
+  "author": "IBM Corp",
+  "license": "Apache-2.0"
+}

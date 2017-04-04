@@ -25,7 +25,7 @@ def getSentiment():
     else:
         score = result["docSentiment"]["score"]
 
-    socketio.emit('dispence', {'sentiment': sentiment})
+    socketio.emit('dispense', {'sentiment': sentiment})
 
     return json.dumps({"sentiment": sentiment, "score": score})
 

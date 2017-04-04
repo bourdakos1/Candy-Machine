@@ -1,19 +1,16 @@
 {
-  "name": "rasp",
-  "version": "1.0.0",
-  "description": "none",
-  "main": "rasp.js",
-  "scripts": {
-    "start": "node rasp.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "Nick Bourdakos",
-  "dependencies": {
-    "mic": "^2.1.1",
-    "onoff": "^1.1.1",
-    "watson-developer-cloud": "^2.2.0",
-    "socket.io-client": "^1.7.2",
-    "johnny-five": "^0.10.6",
-    "raspi-io": "^7.2.2"
-  }
+    "name": "rasp",
+    "version": "1.0.0",
+    "description": "none",
+    "main": "rasp.js",
+    "scripts": {
+        "start": "node rasp.js",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "Nick Bourdakos",
+    "dependencies": {
+        "socket.io-client": "^1.7.2",
+        "johnny-five": "^0.10.6",
+        "raspi-io": "^7.2.2"
+    }
 }
