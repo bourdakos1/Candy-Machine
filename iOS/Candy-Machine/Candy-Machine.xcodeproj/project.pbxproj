@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		233B20C31E818408003A9EDE /* Keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 233B20C21E818408003A9EDE /* Keys.plist */; };
 		237DF5891E2982A500B365FB /* RestKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 237DF5881E2982A500B365FB /* RestKit.framework */; };
-		237DF58B1E29873100B365FB /* Keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 237DF58A1E29873100B365FB /* Keys.plist */; };
 		237DF5931E2CB0F200B365FB /* red.png in Resources */ = {isa = PBXBuildFile; fileRef = 237DF5901E2CB0F200B365FB /* red.png */; };
 		237DF5941E2CB0F200B365FB /* green.png in Resources */ = {isa = PBXBuildFile; fileRef = 237DF5911E2CB0F200B365FB /* green.png */; };
 		237DF5951E2CB0F200B365FB /* blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 237DF5921E2CB0F200B365FB /* blue.png */; };
@@ -43,8 +43,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		233B20C21E818408003A9EDE /* Keys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Keys.plist; sourceTree = "<group>"; };
 		237DF5881E2982A500B365FB /* RestKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RestKit.framework; path = Carthage/Build/iOS/RestKit.framework; sourceTree = "<group>"; };
-		237DF58A1E29873100B365FB /* Keys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Keys.plist; sourceTree = "<group>"; };
 		237DF5901E2CB0F200B365FB /* red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = red.png; sourceTree = "<group>"; };
 		237DF5911E2CB0F200B365FB /* green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = green.png; sourceTree = "<group>"; };
 		237DF5921E2CB0F200B365FB /* blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blue.png; sourceTree = "<group>"; };
@@ -129,8 +129,8 @@
 				2381C7DE1E288ED100329FE0 /* Main.storyboard */,
 				2381C7E11E288ED100329FE0 /* Assets.xcassets */,
 				2381C7E31E288ED100329FE0 /* LaunchScreen.storyboard */,
+				233B20C21E818408003A9EDE /* Keys.plist */,
 				2381C7E61E288ED100329FE0 /* Info.plist */,
-				237DF58A1E29873100B365FB /* Keys.plist */,
 			);
 			path = "Candy-Machine";
 			sourceTree = "<group>";
@@ -280,7 +280,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				237DF58B1E29873100B365FB /* Keys.plist in Resources */,
+				233B20C31E818408003A9EDE /* Keys.plist in Resources */,
 				2381C7E51E288ED100329FE0 /* LaunchScreen.storyboard in Resources */,
 				2381C7E21E288ED100329FE0 /* Assets.xcassets in Resources */,
 				237DF5941E2CB0F200B365FB /* green.png in Resources */,
