@@ -1,2 +1,2 @@
-github "audiokit/AudioKit" "v3.5.1"
-github "watson-developer-cloud/ios-sdk" "v0.12.0"
+github "audiokit/AudioKit" "v3.5.4"
+github "watson-developer-cloud/ios-sdk" "v0.15.0"

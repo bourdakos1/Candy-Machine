@@ -14,6 +14,10 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var speech: UILabel!
     @IBOutlet weak var record: UIButton!
+    @IBOutlet weak var circle: UIView!
+    
+    var streaming = false
+    var waiting = false
     
     var speechToText: SpeechToText
     var speechText = ""
@@ -55,9 +59,9 @@ class ViewController: UIViewController {
             print("requesting: \(self.speechText)")
             var request = URLRequest(url: URL(string: "https://candy-machine.mybluemix.net/sentiment")!)
             request.httpMethod = "POST"
-            request.setValue("application/x-www-form-urlencoded; charset=utf-8", forHTTPHeaderField: "Content-Type")
-            let postString = "transcript=" + self.speechText
-            request.httpBody = postString.data(using: .utf8)
+            request.setValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type")
+            let json: [String: Any] = ["text": self.speechText]
+            request.httpBody = try? JSONSerialization.data(withJSONObject: json)
             let task = URLSession.shared.dataTask(with: request) { data, response, error in
                 if error != nil {
                     DispatchQueue.main.async() {
@@ -75,6 +79,7 @@ class ViewController: UIViewController {
                         }
                     }
                 }
+                self.waiting = false
             }
             task.resume()
         })
@@ -82,24 +87,22 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        let scene = SpriteView(size: view.bounds.size)
-        let skView = view as! SKView
-        scene.scaleMode = .resizeFill
-        skView.presentScene(scene)
-        
-        record.addTarget(self, action: #selector(ViewController.buttonDown(sender:)), for: .touchDown)
-        record.addTarget(self, action: #selector(ViewController.buttonUp(sender:)), for: [.touchUpInside, .touchUpOutside])
+        circle.layer.cornerRadius = 120
+        record.addTarget(self, action: #selector(ViewController.buttonDown(sender:)), for: [.touchUpInside, .touchUpOutside])
     }
     
     func buttonDown(sender: AnyObject) {
-        startStreaming()
-        speech.text = "Listening..."
+        if !streaming && !waiting {
+            circle.backgroundColor = UIColor.red
+            streaming = true
+            startStreaming()
+            speech.text = "Listening..."
+        } else if !waiting {
+            circle.backgroundColor = UIColor.white
+            streaming = false
+            waiting = true
+            stopStreaming()
+        }
     }
-    
-    func buttonUp(sender: AnyObject) {
-        stopStreaming()
-    }
-
 }
 

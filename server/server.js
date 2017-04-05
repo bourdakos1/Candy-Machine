@@ -1,6 +1,9 @@
 var app = require('express')();
 var server = require('http').createServer(app);
 var io = require('socket.io')(server);
+var bodyParser = require('body-parser');
+
+app.use(bodyParser.json());
 
 var NaturalLanguageUnderstandingV1 = require('watson-developer-cloud/natural-language-understanding/v1.js');
 
@@ -10,18 +13,19 @@ var nlu = new NaturalLanguageUnderstandingV1({
     version_date: NaturalLanguageUnderstandingV1.VERSION_DATE_2017_02_27
 });
 
-app.post("/sentiment", function (request, response) {
+app.post("/sentiment", function (req, res) {
+    console.log(req.body)
     nlu.analyze({
-        'text': 'Watson I hate you',
+        'text': req.body.text,
         'features': {
             'sentiment': {}
         }
     }, function(err, response) {
         if (err) {
-            console.log('error:', err);
+            res.send({'error': err});
         } else {
-            io.emit('dispense', {'sentiment': 'positive'})
-            console.log(JSON.stringify(response, null, 2));
+            io.emit('dispense', {'sentiment': response.sentiment.document.label});
+            res.send({'sentiment': response.sentiment.document.label});
         }
     });
 });

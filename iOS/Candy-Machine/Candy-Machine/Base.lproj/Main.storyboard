@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -21,15 +21,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ad4-Aq-7cU">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap &amp; Hold" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JfW-2y-u5y">
-                                <rect key="frame" x="128" y="120" width="119" height="28"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap &amp; Talk" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JfW-2y-u5y">
+                                <rect key="frame" x="132.5" y="120" width="111" height="28"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mwu-S2-HIy">
+                                <rect key="frame" x="67.5" y="213" width="240" height="240"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="Fil-nm-Y9M"/>
+                                    <constraint firstAttribute="height" constant="240" id="afh-Kn-3JC"/>
+                                </constraints>
+                            </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="watson_logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="TXA-TP-KbJ">
                                 <rect key="frame" x="113" y="258" width="150" height="150"/>
                                 <constraints>
@@ -37,6 +42,9 @@
                                     <constraint firstAttribute="width" constant="150" id="gtt-na-ll5"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ad4-Aq-7cU">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -47,10 +55,13 @@
                             <constraint firstItem="JfW-2y-u5y" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="100" id="eaB-qX-wFX"/>
                             <constraint firstItem="Ad4-Aq-7cU" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="hfE-wt-d6S"/>
                             <constraint firstAttribute="trailing" secondItem="Ad4-Aq-7cU" secondAttribute="trailing" id="je6-zz-cLs"/>
+                            <constraint firstItem="Mwu-S2-HIy" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="rCH-fz-I1G"/>
                             <constraint firstItem="JfW-2y-u5y" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rcR-Gi-SeC"/>
+                            <constraint firstItem="Mwu-S2-HIy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sVE-Te-MsV"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="circle" destination="Mwu-S2-HIy" id="Ig4-oU-lWl"/>
                         <outlet property="record" destination="Ad4-Aq-7cU" id="IqM-Y7-eO0"/>
                         <outlet property="speech" destination="JfW-2y-u5y" id="cYf-Zi-AI8"/>
                     </connections>
