@@ -14,7 +14,6 @@ var nlu = new NaturalLanguageUnderstandingV1({
 });
 
 app.post("/sentiment", function (req, res) {
-    console.log(req.body)
     nlu.analyze({
         'text': req.body.text,
         'features': {
@@ -24,8 +23,10 @@ app.post("/sentiment", function (req, res) {
         if (err) {
             res.send({'error': err});
         } else {
-            io.emit('dispense', {'sentiment': response.sentiment.document.label});
-            res.send({'sentiment': response.sentiment.document.label});
+            var sentiment = response.sentiment.document.label
+            console.log(sentiment)
+            io.emit('dispense', {'sentiment': sentiment});
+            res.send({'sentiment': sentiment});
         }
     });
 });
