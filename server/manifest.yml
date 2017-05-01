@@ -1,5 +1,7 @@
 ---
 applications:
- - name: Candy-Machine
-   random-route: true
+ - name: candy-machine-name
+   buildpack: sdk-for-nodejs
+   path: .
    memory: 256M
+   instances: 1

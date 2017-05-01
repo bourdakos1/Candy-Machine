@@ -8,8 +8,8 @@ app.use(bodyParser.json());
 var NaturalLanguageUnderstandingV1 = require('watson-developer-cloud/natural-language-understanding/v1.js');
 
 var nlu = new NaturalLanguageUnderstandingV1({
-    username: '2ca20d44-c07c-41da-bfaf-7666b2c59c7b',
-    password: '24bgsQra3sf4',
+    username: '<NLU_USERNAME>',
+    password: '<NLU_PASSWORD>',
     version_date: NaturalLanguageUnderstandingV1.VERSION_DATE_2017_02_27
 });
 
