@@ -44,20 +44,20 @@
 		237DF5881E2982A500B365FB /* RestKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RestKit.framework; path = Carthage/Build/iOS/RestKit.framework; sourceTree = "<group>"; };
 		237DF5981E2D726F00B365FB /* AudioKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioKit.framework; path = Carthage/Build/iOS/AudioKit.framework; sourceTree = "<group>"; };
 		237DF59A1E2D82D700B365FB /* watson_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = watson_logo.png; sourceTree = "<group>"; };
-		2381C7D71E288ED100329FE0 /* Candy-Machine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = "Candy-Machine.app"; path = "/Users/niko/Documents/Candy-Machine/iOS/Candy-Machine/build/Debug-iphoneos/Candy-Machine.app"; sourceTree = "<absolute>"; };
 		2381C7DA1E288ED100329FE0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2381C7DC1E288ED100329FE0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		2381C7DF1E288ED100329FE0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2381C7E11E288ED100329FE0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2381C7E41E288ED100329FE0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2381C7E61E288ED100329FE0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2381C7EB1E288ED100329FE0 /* Candy-MachineTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "Candy-MachineTests.xctest"; path = "/Users/niko/Documents/Candy-Machine/iOS/Candy-Machine/build/Debug-iphoneos/Candy-MachineTests.xctest"; sourceTree = "<absolute>"; };
 		2381C7EF1E288ED100329FE0 /* Candy_MachineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Candy_MachineTests.swift; sourceTree = "<group>"; };
 		2381C7F11E288ED100329FE0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2381C7F61E288ED100329FE0 /* Candy-MachineUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "Candy-MachineUITests.xctest"; path = "/Users/niko/Documents/Candy-Machine/iOS/Candy-Machine/build/Debug-iphoneos/Candy-MachineUITests.xctest"; sourceTree = "<absolute>"; };
 		2381C7FA1E288ED100329FE0 /* Candy_MachineUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Candy_MachineUITests.swift; sourceTree = "<group>"; };
 		2381C7FC1E288ED100329FE0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		23852F541E294CA60010386E /* SpeechToTextV1.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpeechToTextV1.framework; path = Carthage/Build/iOS/SpeechToTextV1.framework; sourceTree = "<group>"; };
+		238860E71EE0CDA400B05788 /* Candy-Machine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Candy-Machine.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		238860E81EE0CDA400B05788 /* Candy-MachineTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Candy-MachineTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		238860E91EE0CDA400B05788 /* Candy-MachineUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Candy-MachineUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		23B0AEB01E958F8700EBB8D0 /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Cartfile; path = "Candy-Machine/Cartfile"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -97,6 +97,9 @@
 				2381C7F91E288ED100329FE0 /* Candy-MachineUITests */,
 				23B0AEB01E958F8700EBB8D0 /* Cartfile */,
 				23852F531E294CA60010386E /* Frameworks */,
+				238860E71EE0CDA400B05788 /* Candy-Machine.app */,
+				238860E81EE0CDA400B05788 /* Candy-MachineTests.xctest */,
+				238860E91EE0CDA400B05788 /* Candy-MachineUITests.xctest */,
 			);
 			sourceTree = "<group>";
 		};
@@ -161,7 +164,7 @@
 			);
 			name = "Candy-Machine";
 			productName = "Candy-Machine";
-			productReference = 2381C7D71E288ED100329FE0 /* Candy-Machine.app */;
+			productReference = 238860E71EE0CDA400B05788 /* Candy-Machine.app */;
 			productType = "com.apple.product-type.application";
 		};
 		2381C7EA1E288ED100329FE0 /* Candy-MachineTests */ = {
@@ -182,7 +185,7 @@
 			);
 			name = "Candy-MachineTests";
 			productName = "Candy-MachineTests";
-			productReference = 2381C7EB1E288ED100329FE0 /* Candy-MachineTests.xctest */;
+			productReference = 238860E81EE0CDA400B05788 /* Candy-MachineTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		2381C7F51E288ED100329FE0 /* Candy-MachineUITests */ = {
@@ -203,7 +206,7 @@
 			);
 			name = "Candy-MachineUITests";
 			productName = "Candy-MachineUITests";
-			productReference = 2381C7F61E288ED100329FE0 /* Candy-MachineUITests.xctest */;
+			productReference = 238860E91EE0CDA400B05788 /* Candy-MachineUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -556,10 +559,12 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = "Candy-Machine/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bourdakos1.Candy-Machine";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -573,10 +578,12 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = "Candy-Machine/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bourdakos1.Candy-Machine";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
